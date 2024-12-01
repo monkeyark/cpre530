@@ -1,8 +1,12 @@
-const { spawn } = require('child_process');
-const fs = require('fs');
-const path = require('path');
+import { spawn } from 'child_process';
+import { writeFileSync, readFileSync, unlinkSync, existsSync } from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
 
-const PID_FILE = path.join(__dirname, 'server.pid');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const PID_FILE = join(__dirname, 'server.pid');
 
 function startServer() {
   // Start the server using npm run dev
@@ -12,7 +16,7 @@ function startServer() {
   });
 
   // Write the PID to a file
-  fs.writeFileSync(PID_FILE, server.pid.toString());
+  writeFileSync(PID_FILE, server.pid.toString());
 
   // Unref the process to allow the parent to exit
   server.unref();
@@ -23,14 +27,14 @@ function startServer() {
 
 function stopServer() {
   try {
-    if (fs.existsSync(PID_FILE)) {
-      const pid = parseInt(fs.readFileSync(PID_FILE, 'utf8'));
+    if (existsSync(PID_FILE)) {
+      const pid = parseInt(readFileSync(PID_FILE, 'utf8'));
       
       // Kill the process
       process.kill(pid);
       
       // Remove the PID file
-      fs.unlinkSync(PID_FILE);
+      unlinkSync(PID_FILE);
       
       console.log(`Server with PID ${pid} has been stopped`);
     } else {
@@ -40,8 +44,8 @@ function stopServer() {
     if (error.code === 'ESRCH') {
       console.log('Server process not found. It may have already been stopped.');
       // Clean up the PID file if it exists
-      if (fs.existsSync(PID_FILE)) {
-        fs.unlinkSync(PID_FILE);
+      if (existsSync(PID_FILE)) {
+        unlinkSync(PID_FILE);
       }
     } else {
       console.error('Error stopping server:', error);
