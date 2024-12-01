@@ -16,7 +16,7 @@ export function Tutorial({ activeTab }: TutorialProps) {
         <div className="aspect-w-16 aspect-h-9">
           <iframe
             className="w-full h-[500px] rounded-lg"
-            src="https://www.youtube.com/embed/UUyMwUrwSTs"
+            src="https://www.youtube.com/embed/R48lpEIdRfI"
             title="Understanding VPN Concepts"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
