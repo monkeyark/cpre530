@@ -7,7 +7,7 @@ interface TutorialProps {
 
 export function Tutorial({ activeTab }: TutorialProps) {
   const content = {
-    'VPN Concept': (
+    'Introduction': (
       <div className="space-y-4">
         <h2 className="text-2xl font-bold flex items-center gap-2">
           <Video className="w-6 h-6" />
