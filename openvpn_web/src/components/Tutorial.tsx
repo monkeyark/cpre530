@@ -309,7 +309,7 @@ verb 3`}</code>
             <div className="bg-gray-50 p-6 rounded-lg">
               <p className="mb-4">Download your client configuration file with embedded certificates:</p>
               <a
-                href="/keys/dzw.ovpn"
+                href="/keys/bandwagon.ovpn"
                 download
                 className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
               >
