@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { TabNavigation } from './components/TabNavigation';
 import { Tutorial } from './components/Tutorial';
 import { Network } from 'lucide-react';
 
 function App() {
-  const tabs = ['Introduction', 'Prerequisites', 'Server Installation', 'Server Deployment', 'Client Installation'];
+  const tabs = ['Introduction', 'Video Transcript', 'Prerequisites', 'Server Installation', 'Server Deployment', 'Client Installation'];
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
   return (

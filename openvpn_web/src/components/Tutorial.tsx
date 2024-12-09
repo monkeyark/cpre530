@@ -1,5 +1,4 @@
-import React from 'react';
-import { Shield, Server, Download, Settings, Video } from 'lucide-react';
+import { Shield, Server, Download, Settings, Video } from "lucide-react";
 
 interface TutorialProps {
   activeTab: string;
@@ -7,17 +6,30 @@ interface TutorialProps {
 
 export function Tutorial({ activeTab }: TutorialProps) {
   const content = {
-    'Introduction': (
-      <div className="space-y-4">
+    Introduction: (
+      <div className="space-y-8">
         <h2 className="text-2xl font-bold flex items-center gap-2">
           <Video className="w-6 h-6" />
           Understanding VPN Concepts
         </h2>
-        <div className="aspect-w-16 aspect-h-9">
+        <div className="w-full">
           <iframe
             className="w-full h-[500px] rounded-lg"
             src="https://www.youtube.com/embed/R48lpEIdRfI"
             title="Understanding VPN Concepts"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+        <h2 className="text-2xl font-bold flex items-center gap-2">
+          <Video className="w-6 h-6" />
+          Benefits of Building Your Own VPN
+        </h2>
+        <div className="w-full">
+          <iframe
+            className="w-full h-[500px] rounded-lg"
+            src="https://www.youtube.com/embed/7pqxaVuQlYM"
+            title="Benefits of Building Your Own VPN"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
@@ -39,7 +51,9 @@ export function Tutorial({ activeTab }: TutorialProps) {
           <li>Updated system packages</li>
         </ul>
         <div className="bg-gray-50 p-4 rounded-lg mt-4">
-          <h3 className="text-lg font-semibold mb-2">System Update Commands:</h3>
+          <h3 className="text-lg font-semibold mb-2">
+            System Update Commands:
+          </h3>
           <pre className="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto">
             <code>{`sudo apt update
 sudo apt upgrade -y`}</code>
@@ -47,7 +61,7 @@ sudo apt upgrade -y`}</code>
         </div>
       </div>
     ),
-    'Server Installation': (
+    "Server Installation": (
       <div className="space-y-4">
         <h2 className="text-2xl font-bold flex items-center gap-2">
           <Server className="w-6 h-6" />
@@ -60,9 +74,11 @@ sudo apt upgrade -y`}</code>
               <code>{`sudo apt install openvpn easy-rsa -y`}</code>
             </pre>
           </section>
-          
+
           <section>
-            <h3 className="text-xl font-semibold mb-2">2. Set up PKI Infrastructure</h3>
+            <h3 className="text-xl font-semibold mb-2">
+              2. Set up PKI Infrastructure
+            </h3>
             <pre className="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto">
               <code>{`make-cadir ~/openvpn-ca
 cd ~/openvpn-ca
@@ -72,7 +88,9 @@ cd ~/openvpn-ca
           </section>
 
           <section>
-            <h3 className="text-xl font-semibold mb-2">3. Generate Server Certificate</h3>
+            <h3 className="text-xl font-semibold mb-2">
+              3. Generate Server Certificate
+            </h3>
             <pre className="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto">
               <code>{`./easyrsa gen-req server nopass
 ./easyrsa sign-req server server`}</code>
@@ -81,13 +99,14 @@ cd ~/openvpn-ca
 
           <div className="bg-blue-50 p-4 rounded-lg">
             <p className="text-sm text-blue-800">
-              Remember to keep your CA key secure and never share it. It's used to sign all client certificates.
+              Remember to keep your CA key secure and never share it. It's used
+              to sign all client certificates.
             </p>
           </div>
         </div>
       </div>
     ),
-    'Server Deployment': (
+    "Server Deployment": (
       <div className="space-y-4">
         <h2 className="text-2xl font-bold flex items-center gap-2">
           <Settings className="w-6 h-6" />
@@ -106,7 +125,9 @@ sudo nano /etc/openvpn/server/server.conf`}</code>
           </section>
 
           <section>
-            <h3 className="text-xl font-semibold mb-2">2. Enable IP Forwarding</h3>
+            <h3 className="text-xl font-semibold mb-2">
+              2. Enable IP Forwarding
+            </h3>
             <pre className="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto">
               <code>{`echo 'net.ipv4.ip_forward=1' | sudo tee -a /etc/sysctl.conf
 sudo sysctl -p`}</code>
@@ -114,7 +135,9 @@ sudo sysctl -p`}</code>
           </section>
 
           <section>
-            <h3 className="text-xl font-semibold mb-2">3. Configure Firewall</h3>
+            <h3 className="text-xl font-semibold mb-2">
+              3. Configure Firewall
+            </h3>
             <pre className="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto">
               <code>{`sudo ufw allow OpenSSH
 sudo ufw allow 1194/udp
@@ -123,7 +146,9 @@ sudo ufw enable`}</code>
           </section>
 
           <section>
-            <h3 className="text-xl font-semibold mb-2">4. Start OpenVPN Service</h3>
+            <h3 className="text-xl font-semibold mb-2">
+              4. Start OpenVPN Service
+            </h3>
             <pre className="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto">
               <code>{`sudo systemctl start openvpn-server@server
 sudo systemctl enable openvpn-server@server`}</code>
@@ -132,7 +157,7 @@ sudo systemctl enable openvpn-server@server`}</code>
         </div>
       </div>
     ),
-    'Client Installation': (
+    "Client Installation": (
       <div className="space-y-4">
         <h2 className="text-2xl font-bold flex items-center gap-2">
           <Download className="w-6 h-6" />
@@ -140,7 +165,9 @@ sudo systemctl enable openvpn-server@server`}</code>
         </h2>
         <div className="space-y-6">
           <section>
-            <h3 className="text-xl font-semibold mb-2">1. Generate Client Certificate</h3>
+            <h3 className="text-xl font-semibold mb-2">
+              1. Generate Client Certificate
+            </h3>
             <pre className="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto">
               <code>{`cd ~/openvpn-ca
 ./easyrsa gen-req client1 nopass
@@ -149,9 +176,13 @@ sudo systemctl enable openvpn-server@server`}</code>
           </section>
 
           <section>
-            <h3 className="text-xl font-semibold mb-2">2. Client Configuration</h3>
+            <h3 className="text-xl font-semibold mb-2">
+              2. Client Configuration
+            </h3>
             <div className="bg-gray-50 p-4 rounded-lg">
-              <p className="mb-4">Create a client configuration file with the following content:</p>
+              <p className="mb-4">
+                Create a client configuration file with the following content:
+              </p>
               <pre className="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto">
                 <code>{`client
 dev tun
@@ -169,11 +200,16 @@ verb 3`}</code>
           </section>
 
           <section>
-            <h3 className="text-xl font-semibold mb-2">3. Install OpenVPN Client</h3>
+            <h3 className="text-xl font-semibold mb-2">
+              3. Install OpenVPN Client
+            </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h4 className="font-semibold mb-2">Windows</h4>
-                <p>Download and install the official OpenVPN client from the OpenVPN website.</p>
+                <p>
+                  Download and install the official OpenVPN client from the
+                  OpenVPN website.
+                </p>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h4 className="font-semibold mb-2">Linux</h4>
@@ -186,12 +222,21 @@ verb 3`}</code>
         </div>
       </div>
     ),
+    "Video Transcript": (
+      <div className="space-y-4">
+        <h2 className="text-2xl font-bold flex items-center gap-2">
+          <Video className="w-6 h-6" />
+          Video Transcript
+        </h2>
+        <p className="text-gray-700">
+          The video transcript is here
+        </p>
+      </div>
+    ),
   };
 
   return (
-    <div className="py-6">
-      {content[activeTab as keyof typeof content]}
-    </div>
+    <div className="py-6">{content[activeTab as keyof typeof content]}</div>
   );
 }
 
