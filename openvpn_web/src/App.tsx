@@ -8,9 +8,7 @@ function App() {
   const tabs = [
     'Introduction',
     'Video Transcript',
-    'Prerequisites',
     'Server Installation',
-    'Server Deployment',
     'Client Installation',
     'How to use'
   ];
