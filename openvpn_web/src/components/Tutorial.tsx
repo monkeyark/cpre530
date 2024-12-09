@@ -1,4 +1,4 @@
-import { Shield, Server, Download, Settings, Video, FileText } from "lucide-react";
+import { Shield, Server, Download, Settings, Video, FileText, Network } from "lucide-react";
 
 interface TutorialProps {
   activeTab: string;
@@ -6,7 +6,41 @@ interface TutorialProps {
 
 export function Tutorial({ activeTab }: TutorialProps) {
   const content = {
-    Introduction: (
+    "Project Introduction": (
+      <div className="space-y-8">
+        <h2 className="text-2xl font-bold flex items-center gap-2">
+          <Network className="w-6 h-6" />
+          OpenVPN Tutorial Project
+        </h2>
+        <div className="prose max-w-none">
+          <p>Welcome to our OpenVPN Tutorial project. This comprehensive guide will help you understand and implement your own VPN solution.</p>
+          
+          <h3>Project Overview</h3>
+          <p>This tutorial covers everything you need to know about setting up your own VPN server, from basic concepts to detailed implementation steps.</p>
+
+          <div className="bg-blue-50 p-6 rounded-lg">
+            <h4 className="font-semibold mb-2">What You'll Learn</h4>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Understanding VPN concepts and importance</li>
+              <li>Why building your own VPN is better than commercial solutions</li>
+              <li>Step-by-step server setup and configuration</li>
+              <li>Client configuration and deployment</li>
+            </ul>
+          </div>
+
+          <h3>Getting Started</h3>
+          <p>Navigate through the tabs above to access different sections of the tutorial:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong>Video:</strong> Watch our explanatory videos about VPN concepts</li>
+            <li><strong>Video Transcript:</strong> Read detailed transcripts of the videos</li>
+            <li><strong>Server Installation:</strong> Follow our step-by-step server setup guide</li>
+            <li><strong>Client Installation:</strong> Learn how to configure VPN clients</li>
+            <li><strong>How to use:</strong> Get tips on using this tutorial effectively</li>
+          </ul>
+        </div>
+      </div>
+    ),
+    Video: (
       <div className="space-y-8">
         <h2 className="text-2xl font-bold flex items-center gap-2">
           <Video className="w-6 h-6" />
@@ -397,17 +431,6 @@ verb 3`}</code>
               <li>Start with the Introduction to understand VPN concepts</li>
               <li>Follow the sections in order for the best learning experience</li>
               <li>Each section can be bookmarked for later reference</li>
-            </ul>
-          </section>
-
-          <section>
-            <h3 className="text-xl font-semibold mb-2">Tutorial Structure</h3>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>Introduction: Overview and basic concepts</li>
-              <li>Prerequisites: What you need before starting</li>
-              <li>Server Installation: Setting up the VPN server</li>
-              <li>Server Deployment: Configuring and launching the server</li>
-              <li>Client Installation: Setting up VPN clients</li>
             </ul>
           </section>
 

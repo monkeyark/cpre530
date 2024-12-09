@@ -6,7 +6,8 @@ import { useNavigate, useLocation } from 'react-router-dom';
 
 function App() {
   const tabs = [
-    'Introduction',
+    'Project Introduction',
+    'Video',
     'Video Transcript',
     'Server Installation',
     'Client Installation',

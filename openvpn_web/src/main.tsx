@@ -8,7 +8,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Navigate to="/introduction" replace />} />
+        <Route path="/" element={<Navigate to="/project-introduction" replace />} />
         <Route path="/*" element={<App />} />
       </Routes>
     </BrowserRouter>
