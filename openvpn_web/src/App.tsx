@@ -5,7 +5,15 @@ import { Network } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 function App() {
-  const tabs = ['Introduction', 'Video Transcript', 'Prerequisites', 'Server Installation', 'Server Deployment', 'Client Installation'];
+  const tabs = [
+    'Introduction',
+    'Video Transcript',
+    'Prerequisites',
+    'Server Installation',
+    'Server Deployment',
+    'Client Installation',
+    'How to use'
+  ];
   const [activeTab, setActiveTab] = useState(tabs[0]);
   const navigate = useNavigate();
   const location = useLocation();
