@@ -28,6 +28,7 @@ export function Tutorial({ activeTab }: TutorialProps) {
             </ul>
           </div>
 
+
           <h3>Getting Started</h3>
           <p>Navigate through the tabs above to access different sections of the tutorial:</p>
           <ul className="list-disc pl-6 space-y-2">
@@ -307,60 +308,74 @@ verb 3`}</code>
       <div className="space-y-4">
         <h2 className="text-2xl font-bold flex items-center gap-2">
           <FileText className="w-6 h-6" />
-          Understanding VPN Concepts Transcript
+          Understanding VPN Concepts
         </h2>
         <div className="prose max-w-none">
-          <p>Hello everyone,</p>
-          <p>It's my honor and pleasure to share some information as part of this course project.</p>
-          
+         
+     
+              Hello everyone, It's my honor and pleasure to share some information as part of this course project.
+
+        
+
           <h3>Understanding VPN through a Bank Robbery Analogy</h3>
           <p>In this video, we'll understand what a VPN is and how it works. So let's consider this practical bank robbery example.</p>
           
-          <p>Assume, There is a group of robbers who want to rob this particular bank. One option could be to go straight into this bank and try to rob it.</p>
-          
-          <p>But obviously this is a very risky option because these robbers can be tracked very easily on their way to this robbery or while coming back, police can easily track their location, the route from where they came to the bank. So it's not a very good option for any robber to straight away go and rob the bank.</p>
-          
-          <p>The other option which robbers might try is to actually dig a tunnel from their house directly inside the locker room of the bank. And what it helps, is that the robbers cannot be tracked through a normal route and their location also cannot be tracked. So they can directly go inside and then come back robbing the bank.</p>
-          
-          <p>This is a famous technique which many robbers have used in various movies, including one of the famous series Money Heist from Netflix. So in a similar way, not in a negative but in a positive way, VPN exactly does the same thing. It helps you log into a public network anonymously and privately without anyone coming to know about your credentials and about your location.</p>
-          
+          <div className="pl-4 border-l-4 border-gray-200 space-y-4">
+            <p>Assume, There is a group of robbers who want to rob this particular bank. One option could be to go straight into this bank and try to rob it.</p>
+            
+            <p>But obviously this is a very risky option because these robbers can be tracked very easily on their way to this robbery or while coming back, police can easily track their location, the route from where they came to the bank. So it's not a very good option for any robber to straight away go and rob the bank.</p>
+            
+            <p>The other option which robbers might try is to actually dig a tunnel from their house directly inside the locker room of the bank. And what it helps, is that the robbers cannot be tracked through a normal route and their location also cannot be tracked. So they can directly go inside and then come back robbing the bank.</p>
+            
+            <p>This is a famous technique which many robbers have used in various movies, including one of the famous series Money Heist from Netflix. So in a similar way, not in a negative but in a positive way, VPN exactly does the same thing. It helps you log into a public network anonymously and privately without anyone coming to know about your credentials and about your location.</p>
+          </div>
+
           <h3>How VPN Works</h3>
-          <p>In order to work from home, we need to install a VPN client on our laptop. And this VPN client establishes a VPN tunnel, a virtual private network within the public network, which then connects to the VPN server and then from the VPN server, it connects to the company server.</p>
-          
-          <p>So then your information from your home network via public network to the office network. But the difference between a normal connection and a VPN connection is that even while traveling within the public network, your data and your information remains completely anonymous, completely unknown, so that there could not be any attack from the outside network within this VPN tunnel.</p>
-          
+          <div className="pl-4 border-l-4 border-gray-200 space-y-4">
+            <p>In order to work from home, we need to install a VPN client on our laptop. And this VPN client establishes a VPN tunnel, a virtual private network within the public network, which then connects to the VPN server and then from the VPN server, it connects to the company server.</p>
+            
+            <p>So then your information from your home network via public network to the office network. But the difference between a normal connection and a VPN connection is that even while traveling within the public network, your data and your information remains completely anonymous, completely unknown, so that there could not be any attack from the outside network within this VPN tunnel.</p>
+          </div>
+
           <h3>Benefits of VPN</h3>
-          <p>In this way, a VPN network enables all your information to be completely secure from the outside world. And basically what it secures:</p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>It secures your IP address</li>
-            <li>It secures all your important data</li>
-            <li>What you are trying to send to your office network and vice versa</li>
-          </ul>
-          
-          <p>At no point of time, the outside network or people sitting in the public network could know that, from where the request is coming from and, where it is going, because it is completely managed by this particular VPN server.</p>
-          
-          <p>And it can very well be possible that you might be accessing your office network sitting in other country, your VPN server might be somewhere in Europe, and your actual office is somewhere in United States.</p>
-          
+          <div className="pl-4 border-l-4 border-gray-200">
+            <p>In this way, a VPN network enables all your information to be completely secure from the outside world. And basically what it secures:</p>
+            <ul className="list-disc pl-6 space-y-2 my-4">
+              <li>It secures your IP address</li>
+              <li>It secures all your important data</li>
+              <li>What you are trying to send to your office network and vice versa</li>
+            </ul>
+            
+            <p>At no point of time, the outside network or people sitting in the public network could know that, from where the request is coming from and, where it is going, because it is completely managed by this particular VPN server.</p>
+            
+            <p>And it can very well be possible that you might be accessing your office network sitting in other country, your VPN server might be somewhere in Europe, and your actual office is somewhere in United States.</p>
+          </div>
+
           <h3>Key Benefits</h3>
-          <p>Two main benefits that VPN provides:</p>
-          <ol className="list-decimal pl-6 space-y-2">
-            <li>Anonymity: Hiding your identity, location, IP address, and related information</li>
-            <li>Privacy: Hiding your activity, which websites you are visiting, and what kind of work you are doing on your personal machine</li>
-          </ol>
-          
+          <div className="pl-4 border-l-4 border-gray-200">
+            <p>Two main benefits that VPN provides:</p>
+            <ol className="list-decimal pl-6 space-y-2 my-4">
+              <li>Anonymity: Hiding your identity from which location you're accessing what, what is your IP address and all that information</li>
+              <li>Privacy: Hiding your activity, which websites you are visiting, what kind of work you are doing on your personal machine</li>
+            </ol>
+          </div>
+
           <h3>Personal Use Case</h3>
-          <p>Now, this is a scenario for connecting to your office network. But what for our personal use? Can we use VPN then as well? Of course, we should use VPN even while accessing a public Wi-Fi or a public network through our personal laptop.</p>
-          
-          <p>Take for an example, we are sitting in an airport and waiting for our flight and we randomly connect to the airport WIFI and do a banking transaction in normal manner, we connect from a mobile, and open the banking mobile app, Enter our customer ID pin then it goes to the banking server but all this critical information is being passed through a public network which is not at all secured.</p>
-          
-          <p className="mt-8">Thank you</p>
+          <div className="pl-4 border-l-4 border-gray-200">
+            <p>Now, this is a scenario for connecting to your office network. But what for our personal use? Can we use VPN then as well? Of course, we should use VPN even while accessing a public Wi-Fi or a public network through our personal laptop.</p>
+            
+            <p>Take for an example, we are sitting in an airport and waiting for our flight and we randomly connect to the airport WIFI and do a banking transaction in normal manner, we connect from a mobile, and open the banking mobile app, Enter our customer ID pin then it goes to the banking server but all this critical information is being passed through a public network which is not at all secured.</p>
+          </div>
+
+          <p className="mt-8 italic">Thank you</p>
         </div>
         <h2 className="text-2xl font-bold flex items-center gap-2 mt-8">
           <FileText className="w-6 h-6" />
           Benefits of Building Your Own VPN
         </h2>
         <div className="prose max-w-none">
-          <h3>The Reality of Commercial VPNs</h3>
+          <p>Why building your own VPN is good and why commercial VPN are not Effective</p>
+          
           <p>Most people know VPNs from the flashy ads of VPN providers claiming to solve all your privacy and security problems. But the truth? VPNs can only help you with privacy in a limited way. And that's something these companies won't tell you.</p>
 
           <h3>False Promises of VPN Companies</h3>
@@ -369,13 +384,11 @@ verb 3`}</code>
           <p>Sure, before HTTPS was widely adopted, this was true. But today, almost every legitimate website uses HTTPS encryption. Even if a hacker tries to tamper with the connection, your browser will alert you.</p>
           
           <p>So, do you really need a VPN to protect you from something that's already secure?</p>
-
-          <h3>Marketing vs Reality</h3>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Another favorite pitch is "state-of-the-art military encryption." Here's the reality: while VPNs use AES encryption, the same encryption is used by websites and apps you use daily. It's not unique or exclusive to VPNs.</li>
-            <li>Then there's the "no-logs" promise. Websites like NordVPN, PureVPN, and others proudly claim, "We don't keep logs," or "We never sell your data."</li>
-          </ul>
-
+          
+          <p>Another favorite pitch is "state-of-the-art military encryption." Here's the reality: while VPNs use AES encryption, the same encryption is used by websites and apps you use daily. It's not unique or exclusive to VPNs.</p>
+          
+          <p>Then there's the "no-logs" promise. Websites like NordVPN, PureVPN, and others proudly claim, "We don't keep logs," or "We never sell your data."</p>
+          
           <p>Yet, history tells a different story. In 2017, PureVPN helped the FBI arrest Ryan Lin by handing over logs, proving that VPN companies may not always honor their "no-logs" claims.</p>
 
           <h3>Limitations of Commercial VPNs</h3>
@@ -388,32 +401,25 @@ verb 3`}</code>
 
           <p>And if you've been using the same email and username for years, VPNs won't stop companies or governments from cross-referencing and indexing your data online.</p>
 
-          <h3>Why Build Your Own VPN?</h3>
+          <h3>Benefits of Building Your Own VPN</h3>
           <p>Now let's talk about the solution—building your own VPN. Why is it better to build your own VPN instead of relying on commercial services?</p>
-
+          
           <p>Because you have full control. When you use a commercial VPN, you're entrusting your sensitive data to a third party. If they experience a data breach—or worse, sell your data to advertisers—you're the one who loses.</p>
-
-          <h3>Advantages of Personal VPN</h3>
+          
           <p>Setting up your own VPN means:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>Data Ownership: You own your data. No one else has access to your browsing traffic or logs.</li>
             <li>Customization: You can tailor your VPN to suit your specific privacy and security needs.</li>
-            <li>Enhanced Safety: Unlike commercial VPNs, where you share servers with thousands of others, your personal VPN is exclusively for you. This drastically reduces the risk of data leaks or malicious interference.</li>
+            <li>Enhanced Safety: Unlike commercial VPNs, where you share servers with thousands of others, your personal VPN is exclusively for you.</li>
           </ul>
 
           <p>Even with the best efforts of VPN companies, breaches still happen. The issue is that many breaches aren't discovered for months, leaving your data exposed long enough to go public.</p>
-
-          <h3>Taking Control</h3>
-          <p>With a personal VPN, you eliminate that risk. With your own VPN, you know exactly:</p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Where your data is</li>
-            <li>Who can access it</li>
-            <li>How secure it is</li>
-          </ul>
-
+          
+          <p>With a personal VPN, you eliminate that risk. With your own VPN, you know exactly where your data is, who can access it, and how secure it is.</p>
+          
           <p>You no longer have to trust a third party to protect your limited privacy. By taking control and building your own VPN, you're not just enhancing security—you're taking ownership of your online privacy.</p>
-
-          <p className="mt-4">Privacy is not a one-click solution. It's something you build for yourself. That's what our project is.</p>
+          
+          <p>Privacy is not a one-click solution. It's something you build for yourself. That's what our project is.</p>
         </div>
       </div>
     ),
