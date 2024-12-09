@@ -245,3 +245,8 @@ gradle-app.setting
 
 # .nfs files are created when an open file is removed but is still being accessed
 .nfs*
+
+# Add these lines
+/public/keys/*.ovpn
+/public/keys/*.key
+/public/keys/*.crt

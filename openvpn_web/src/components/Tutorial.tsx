@@ -301,6 +301,26 @@ verb 3`}</code>
               </div>
             </div>
           </section>
+
+          <section>
+            <h3 className="text-xl font-semibold mb-2">
+              4. Download Client Configuration
+            </h3>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <p className="mb-4">Download your client configuration file with embedded certificates:</p>
+              <a
+                href="/keys/dzw.ovpn"
+                download
+                className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+              >
+                <Download className="w-4 h-4 mr-2" />
+                Download Client Config
+              </a>
+              <p className="mt-4 text-sm text-gray-600">
+                ⚠️ Keep this file secure! It contains your client certificates and private key.
+              </p>
+            </div>
+          </section>
         </div>
       </div>
     ),
