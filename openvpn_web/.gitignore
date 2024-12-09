@@ -250,3 +250,5 @@ gradle-app.setting
 /public/keys/*.ovpn
 /public/keys/*.key
 /public/keys/*.crt
+/certs/*.key
+/certs/*.crt
