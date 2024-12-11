@@ -285,20 +285,59 @@ verb 3`}</code>
             <h3 className="text-xl font-semibold mb-2">
               3. Install OpenVPN Client
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h4 className="font-semibold mb-2">Windows</h4>
-                <p>
-                  Download and install the official OpenVPN client from the
-                  OpenVPN website.
-                </p>
+            <div className="space-y-4">
+              <p>Download and install the official OpenVPN Connect client for your platform:</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h4 className="font-semibold mb-2">Windows</h4>
+                  <p className="mb-2">Download the official OpenVPN Connect client from OpenVPN website.</p>
+                  <a 
+                    href="https://openvpn.net/client/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800"
+                  >
+                    Download for Windows →
+                  </a>
+                </div>
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h4 className="font-semibold mb-2">MacOS</h4>
+                  <p className="mb-2">Get the OpenVPN Connect client for Mac.</p>
+                  <a 
+                    href="https://openvpn.net/client/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800"
+                  >
+                    Download for MacOS →
+                  </a>
+                </div>
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <h4 className="font-semibold mb-2">Linux</h4>
+                  <p className="mb-2">Install via package manager or download from website:</p>
+                  <pre className="bg-gray-800 text-white p-2 rounded-lg text-sm mb-2">
+                    <code>sudo apt install openvpn</code>
+                  </pre>
+                  <a 
+                    href="https://openvpn.net/client/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800"
+                  >
+                    Download for Linux →
+                  </a>
+                </div>
               </div>
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h4 className="font-semibold mb-2">Linux</h4>
-                <pre className="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto">
-                  <code>sudo apt install openvpn</code>
-                </pre>
-              </div>
+              <p className="text-sm text-gray-600 mt-2">
+                Visit <a 
+                  href="https://openvpn.net/client/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800"
+                >
+                  OpenVPN's official client page
+                </a> for more platforms including Android, iOS, and ChromeOS.
+              </p>
             </div>
           </section>
 
