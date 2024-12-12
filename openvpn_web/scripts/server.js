@@ -2,11 +2,28 @@ import { spawn } from 'child_process';
 import { writeFileSync, readFileSync, unlinkSync, existsSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import os from 'os';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const PID_FILE = join(__dirname, 'server.pid');
+const PORT = 5173; // Default Vite port
+
+function getLocalAddresses() {
+  const interfaces = os.networkInterfaces();
+  const addresses = [];
+
+  for (const name of Object.keys(interfaces)) {
+    for (const iface of interfaces[name]) {
+      if (iface.family === 'IPv4' && !iface.internal) {
+        addresses.push(iface.address);
+      }
+    }
+  }
+
+  return addresses;
+}
 
 function startServer() {
   // Start the server using npm run dev
@@ -23,6 +40,14 @@ function startServer() {
 
   console.log(`Server started with PID: ${server.pid}`);
   console.log('Server is running in the background');
+
+  const addresses = getLocalAddresses();
+
+  console.log('You can access the web application at:');
+  console.log(`- Local: http://localhost:${PORT}`);
+  addresses.forEach(address => {
+    console.log(`- Network: http://${address}:${PORT}`);
+  });
 }
 
 function stopServer() {
@@ -37,6 +62,11 @@ function stopServer() {
       unlinkSync(PID_FILE);
       
       console.log(`Server with PID ${pid} has been stopped`);
+      console.log('The web application was stopped at:');
+      console.log(`- Local: http://localhost:${PORT}`);
+      getLocalAddresses().forEach(address => {
+        console.log(`- Network: http://${address}:${PORT}`);
+      });
     } else {
       console.log('No server is currently running');
     }
