@@ -11,7 +11,6 @@ function App() {
     'Video Transcript',
     'Server Installation',
     'Client Installation',
-    'How to use'
   ];
   const [activeTab, setActiveTab] = useState(tabs[0]);
   const navigate = useNavigate();

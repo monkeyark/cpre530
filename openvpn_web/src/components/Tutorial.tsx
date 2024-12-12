@@ -36,7 +36,6 @@ export function Tutorial({ activeTab }: TutorialProps) {
             <li><strong>Video Transcript:</strong> Read detailed transcripts of the videos</li>
             <li><strong>Server Installation:</strong> Follow our step-by-step server setup guide</li>
             <li><strong>Client Installation:</strong> Learn how to configure VPN clients</li>
-            <li><strong>How to use:</strong> Get tips on using this tutorial effectively</li>
           </ul>
         </div>
       </div>
@@ -246,44 +245,10 @@ sudo systemctl enable openvpn-server@server`}</code>
           Client Installation
         </h2>
         <div className="space-y-6">
-          <section>
-            <h3 className="text-xl font-semibold mb-2">
-              1. Generate Client Certificate
-            </h3>
-            <pre className="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto">
-              <code>{`cd ~/openvpn-ca
-./easyrsa gen-req client1 nopass
-./easyrsa sign-req client client1`}</code>
-            </pre>
-          </section>
 
           <section>
             <h3 className="text-xl font-semibold mb-2">
-              2. Client Configuration
-            </h3>
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <p className="mb-4">
-                Create a client configuration file with the following content:
-              </p>
-              <pre className="bg-gray-800 text-white p-4 rounded-lg overflow-x-auto">
-                <code>{`client
-dev tun
-proto udp
-remote your_server_ip 1194
-resolv-retry infinite
-nobind
-persist-key
-persist-tun
-remote-cert-tls server
-cipher AES-256-GCM
-verb 3`}</code>
-              </pre>
-            </div>
-          </section>
-
-          <section>
-            <h3 className="text-xl font-semibold mb-2">
-              3. Install OpenVPN Client
+              1. Install OpenVPN Client
             </h3>
             <div className="space-y-4">
               <p>Download and install the official OpenVPN Connect client for your platform:</p>
@@ -343,10 +308,10 @@ verb 3`}</code>
 
           <section>
             <h3 className="text-xl font-semibold mb-2">
-              4. Download Client Configuration
+              2. Download Client Configuration
             </h3>
             <div className="bg-gray-50 p-6 rounded-lg">
-              <p className="mb-4">Download your client configuration file with embedded certificates:</p>
+              <p className="mb-4">Download client configuration file with certificates:</p>
               <a
                 href="/keys/bandwagon.ovpn"
                 download
@@ -479,31 +444,6 @@ verb 3`}</code>
           <p>You no longer have to trust a third party to protect your limited privacy. By taking control and building your own VPN, you're not just enhancing security—you're taking ownership of your online privacy.</p>
           
           <p>Privacy is not a one-click solution. It's something you build for yourself. That's what our project is.</p>
-        </div>
-      </div>
-    ),
-    "How to use": (
-      <div className="space-y-4">
-        <h2 className="text-2xl font-bold flex items-center gap-2">
-          <Settings className="w-6 h-6" />
-          How to Use This Tutorial
-        </h2>
-        <div className="space-y-6">
-          <section>
-            <h3 className="text-xl font-semibold mb-2">Navigation</h3>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>Use the tabs above to navigate between different sections</li>
-              <li>Start with the Introduction to understand VPN concepts</li>
-              <li>Follow the sections in order for the best learning experience</li>
-              <li>Each section can be bookmarked for later reference</li>
-            </ul>
-          </section>
-
-          <div className="bg-blue-50 p-4 rounded-lg">
-            <p className="text-sm text-blue-800">
-              Tip: You can share direct links to specific sections with others by copying the URL from your browser.
-            </p>
-          </div>
         </div>
       </div>
     ),
