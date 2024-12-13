@@ -13,9 +13,8 @@ export function Tutorial({ activeTab }: TutorialProps) {
           OpenVPN Tutorial Project
         </h2>
         <div className="prose max-w-none">
+          <h3 className="text-xl font-semibold mb-2 mt-8">Project Overview</h3>
           <p>Welcome to our OpenVPN Tutorial project. This comprehensive guide will help you understand and implement your own VPN solution.</p>
-          
-          <h3>Project Overview</h3>
           <p>This tutorial covers everything you need to know about setting up your own VPN server, from basic concepts to detailed implementation steps.</p>
 
           <div className="bg-blue-50 p-6 rounded-lg">
@@ -29,7 +28,7 @@ export function Tutorial({ activeTab }: TutorialProps) {
           </div>
 
 
-          <h3>Getting Started</h3>
+          <h3 className="text-xl font-semibold mb-2 mt-8">Getting Started</h3>
           <p>Navigate through the tabs above to access different sections of the tutorial:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong>Video:</strong> Watch our explanatory videos about VPN concepts</li>
@@ -37,6 +36,9 @@ export function Tutorial({ activeTab }: TutorialProps) {
             <li><strong>Server Installation:</strong> Follow our step-by-step server setup guide</li>
             <li><strong>Client Installation:</strong> Learn how to configure VPN clients</li>
           </ul>
+
+          <h3 className="text-xl font-semibold mb-2 mt-8">Project Repository</h3>
+          <p>The complete source code for this project is available on <a href="https://github.com/monkeyark/cpre530" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">GitHub</a>.</p>
         </div>
       </div>
     ),
@@ -341,7 +343,7 @@ sudo systemctl enable openvpn-server@server`}</code>
 
         
 
-          <h3>Understanding VPN through a Bank Robbery Analogy</h3>
+          <h3 className="text-xl font-semibold mb-2 mt-8">Understanding VPN through a Bank Robbery Analogy</h3>
           <p>In this video, we'll understand what a VPN is and how it works. So let's consider this practical bank robbery example.</p>
           
           <div className="pl-4 border-l-4 border-gray-200 space-y-4">
@@ -354,14 +356,14 @@ sudo systemctl enable openvpn-server@server`}</code>
             <p>This is a famous technique which many robbers have used in various movies, including one of the famous series Money Heist from Netflix. So in a similar way, not in a negative but in a positive way, VPN exactly does the same thing. It helps you log into a public network anonymously and privately without anyone coming to know about your credentials and about your location.</p>
           </div>
 
-          <h3>How VPN Works</h3>
+          <h3 className="text-xl font-semibold mb-2 mt-8">How VPN Works</h3>
           <div className="pl-4 border-l-4 border-gray-200 space-y-4">
             <p>In order to work from home, we need to install a VPN client on our laptop. And this VPN client establishes a VPN tunnel, a virtual private network within the public network, which then connects to the VPN server and then from the VPN server, it connects to the company server.</p>
             
             <p>So then your information from your home network via public network to the office network. But the difference between a normal connection and a VPN connection is that even while traveling within the public network, your data and your information remains completely anonymous, completely unknown, so that there could not be any attack from the outside network within this VPN tunnel.</p>
           </div>
 
-          <h3>Benefits of VPN</h3>
+          <h3 className="text-xl font-semibold mb-2 mt-8">Benefits of VPN</h3>
           <div className="pl-4 border-l-4 border-gray-200">
             <p>In this way, a VPN network enables all your information to be completely secure from the outside world. And basically what it secures:</p>
             <ul className="list-disc pl-6 space-y-2 my-4">
@@ -375,7 +377,7 @@ sudo systemctl enable openvpn-server@server`}</code>
             <p>And it can very well be possible that you might be accessing your office network sitting in other country, your VPN server might be somewhere in Europe, and your actual office is somewhere in United States.</p>
           </div>
 
-          <h3>Key Benefits</h3>
+          <h3 className="text-xl font-semibold mb-2 mt-8">Key Benefits</h3>
           <div className="pl-4 border-l-4 border-gray-200">
             <p>Two main benefits that VPN provides:</p>
             <ol className="list-decimal pl-6 space-y-2 my-4">
@@ -384,7 +386,7 @@ sudo systemctl enable openvpn-server@server`}</code>
             </ol>
           </div>
 
-          <h3>Personal Use Case</h3>
+          <h3 className="text-xl font-semibold mb-2 mt-8">Personal Use Case</h3>
           <div className="pl-4 border-l-4 border-gray-200">
             <p>Now, this is a scenario for connecting to your office network. But what for our personal use? Can we use VPN then as well? Of course, we should use VPN even while accessing a public Wi-Fi or a public network through our personal laptop.</p>
             
@@ -402,7 +404,7 @@ sudo systemctl enable openvpn-server@server`}</code>
           
           <p>Most people know VPNs from the flashy ads of VPN providers claiming to solve all your privacy and security problems. But the truth? VPNs can only help you with privacy in a limited way. And that's something these companies won't tell you.</p>
 
-          <h3>False Promises of VPN Companies</h3>
+          <h3 className="text-xl font-semibold mb-2 mt-8">False Promises of VPN Companies</h3>
           <p>Commercial VPNs often advertise fear-based claims like: "Evil hackers will steal your banking details on café Wi-Fi!"</p>
           
           <p>Sure, before HTTPS was widely adopted, this was true. But today, almost every legitimate website uses HTTPS encryption. Even if a hacker tries to tamper with the connection, your browser will alert you.</p>
@@ -415,7 +417,7 @@ sudo systemctl enable openvpn-server@server`}</code>
           
           <p>Yet, history tells a different story. In 2017, PureVPN helped the FBI arrest Ryan Lin by handing over logs, proving that VPN companies may not always honor their "no-logs" claims.</p>
 
-          <h3>Limitations of Commercial VPNs</h3>
+          <h3 className="text-xl font-semibold mb-2 mt-8">Limitations of Commercial VPNs</h3>
           <p>While VPNs can hide your IP address and encrypt traffic between you and a server, they can't:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>Stop your phone from tracking your location</li>
@@ -425,7 +427,7 @@ sudo systemctl enable openvpn-server@server`}</code>
 
           <p>And if you've been using the same email and username for years, VPNs won't stop companies or governments from cross-referencing and indexing your data online.</p>
 
-          <h3>Benefits of Building Your Own VPN</h3>
+          <h3 className="text-xl font-semibold mb-2 mt-8">Benefits of Building Your Own VPN</h3>
           <p>Now let's talk about the solution—building your own VPN. Why is it better to build your own VPN instead of relying on commercial services?</p>
           
           <p>Because you have full control. When you use a commercial VPN, you're entrusting your sensitive data to a third party. If they experience a data breach—or worse, sell your data to advertisers—you're the one who loses.</p>
