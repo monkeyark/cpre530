@@ -293,6 +293,16 @@ sudo systemctl enable openvpn-server@server`}</code>
                   >
                     Download for Linux →
                   </a>
+                  <div className="mt-2">
+                    <p className="text-sm mb-2">For Gnome Desktop users:</p>
+                    <ol className="text-sm list-decimal pl-4 mb-2">
+                      <li>Open Settings</li>
+                      <li>Go to Network</li>
+                      <li>Click VPN</li>
+                      <li>Click +</li>
+                      <li>Select "Import from file"</li>
+                    </ol>
+                  </div>
                 </div>
               </div>
               <p className="text-sm text-gray-600 mt-2">
